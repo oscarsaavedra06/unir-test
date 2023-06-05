@@ -103,7 +103,7 @@ class TestApi(unittest.TestCase):
             url = f"{BASE_URL}/calc/divide/4/0"
             response = urlopen(url, timeout=DEFAULT_TIMEOUT)
             self.assertEqual(
-                   response.status, "400"
+                   response.status, http.client.BAD_REQUEST
             )
 
     def test_api_divide_bad(self):
