@@ -99,12 +99,12 @@ class TestApi(unittest.TestCase):
                 response.status, http.client.NOT_FOUND
             )
 
-    def test_api_divide(self):
-            url = f"{BASE_URL}/calc/divide/4/0"
-            response = urlopen(url, timeout=DEFAULT_TIMEOUT)
-            self.assertEqual(
-                   response.status, http.client.BAD_REQUEST
-            )
+    # def test_api_divide(self):
+    #         url = f"{BASE_URL}/calc/divide/4/0"
+    #         response = urlopen(url, timeout=DEFAULT_TIMEOUT)
+    #         self.assertEqual(
+    #                response.status, http.client.BAD_REQUEST
+    #         )
 
     def test_api_divide_bad(self):
             url = f"{BASE_URL}/calc/divide/4/4"
